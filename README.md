@@ -16,41 +16,78 @@ My Node.js learning journey — backend fundamentals, one small script at a time
 
 ## 📚 Lessons
 
-| # | File | What it covers |
-|---|------|----------------|
-| 01 | `01_script.js` | Your first script — variables, a `for` loop, `console.log` |
-| 02 | `02_process.js` | The `process` object and reading command-line arguments with `process.argv` |
-| 03 | `03_modules_export.js` | Modules and exports *(in progress)* |
+| # | File / Folder | What it covers |
+|---|---------------|----------------|
+| 01 | `01_script.js` | Your first script — variables, loops, and importing modules |
+| 02 | `02_process.js` | The `process` object and reading CLI arguments via `process.argv` |
+| 03 | `03_modules_export.js` | Exporting single values, functions, or objects using `module.exports` |
+| 04 | `Fruits/` *(Directory)* | Requiring directories and using `index.js` as the bundle entry point |
 
 ## ▶️ How to run
 
 ```bash
+# 1. Run main script (imports 03_modules_export.js and Fruits directory)
 node 01_script.js
+
+# 2. Run CLI argument reader with custom names
 node 02_process.js Sahil Ram
 ```
 
-`02_process.js` greets every name you pass after the filename:
+### Output of `01_script.js`:
+```
+123
+[
+  { name: 'apple', color: 'red' },
+  { name: 'banana', color: 'yellow' },
+  { name: 'orange', color: 'orange' }
+]
+```
 
+### Output of `02_process.js Sahil Ram`:
 ```
 hello to  Sahil
 hello to  Ram
 ```
 
-## 📝 Notes
+## 📝 Notes & Concepts
 
+### 1. `process` Object
 **`process`** is a global object in Node.js — no `require()` needed. It bridges your code and the operating system:
 
 - `process.cwd()` — current working directory
 - `process.env` — environment variables
 - `process.exit()` — stop the script immediately
 
-**`process.argv`** holds the command-line arguments. The first two entries are always fixed:
+**`process.argv`** holds the command-line arguments:
 
 | Index | Contains |
 |-------|----------|
 | `process.argv[0]` | Path to the Node.js executable |
 | `process.argv[1]` | Path to the script being run |
-| `process.argv[2]` and beyond | Arguments you typed |
+| `process.argv[2]` and beyond | Arguments you typed in the terminal |
+
+---
+
+### 2. `module.exports` and `require()`
+- Each JavaScript file in Node.js is treated as an isolated module.
+- Variables and functions remain **private** to that file by default.
+- Use `module.exports = ...` to send data or functions out.
+- Use `require("./filename")` to import what was exported.
+
+---
+
+### 3. Requiring Directories (`index.js` Entry Point)
+When you require a folder path instead of a specific file:
+
+```javascript
+const info = require("./Fruits");
+```
+
+Node.js automatically looks for a special file named **`index.js`** inside that directory (`Fruits/index.js`).
+
+**Why is this useful?**
+- **Entry Point / Aggregator**: `index.js` imports individual modules (`apple.js`, `banana.js`, `orange.js`), combines them into a single structure (array or object), and exports them together.
+- **Clean Imports**: Other files only need to require the folder (`./Fruits`) instead of importing each fruit file one by one.
 
 ## 🛠️ Built With
 
@@ -62,7 +99,7 @@ hello to  Ram
 
 ## 🔜 What's next
 
-More lessons as I learn — modules and exports are up next.
+More lessons as I learn — exploring npm, package management, and Express.js!
 
 <div align="center">
 
