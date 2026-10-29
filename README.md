@@ -1,18 +1,20 @@
-# Learn Node.js 🌱
+<div align="center">
 
-My Node.js learning journey — one small script at a time. No frameworks, no setup, just Node.js and the terminal.
+![Learn Node.js](https://capsule-render.vercel.app/api?type=waving&color=339933&height=220&section=header&text=Learn%20Node.js&fontSize=65&fontColor=ffffff&animation=fadeIn)
 
-![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=339933&center=true&vCenter=true&width=435&lines=Learn+Node.js+step+by+step;No+frameworks%2C+just+Node.js;One+script+at+a+time)](https://git.io/typing-svg)
 
-## Prerequisites
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Learning](https://img.shields.io/badge/Status-Learning-339933?style=for-the-badge)
 
-[Node.js](https://nodejs.org/) installed. Check with:
+</div>
 
-```bash
-node -v
-```
+## 🚀 About
 
-## Lessons
+My Node.js learning journey — backend fundamentals, one small script at a time. No frameworks, no setup, just Node.js and the terminal.
+
+## 📚 Lessons
 
 | # | File | What it covers |
 |---|------|----------------|
@@ -20,7 +22,7 @@ node -v
 | 02 | `02_process.js` | The `process` object and reading command-line arguments with `process.argv` |
 | 03 | `03_modules_export.js` | Modules and exports *(in progress)* |
 
-## How to run
+## ▶️ How to run
 
 ```bash
 node 01_script.js
@@ -34,7 +36,7 @@ hello to  Sahil
 hello to  Ram
 ```
 
-## Notes
+## 📝 Notes
 
 **`process`** is a global object in Node.js — no `require()` needed. It bridges your code and the operating system:
 
@@ -50,6 +52,20 @@ hello to  Ram
 | `process.argv[1]` | Path to the script being run |
 | `process.argv[2]` and beyond | Arguments you typed |
 
-## What's next
+## 🛠️ Built With
+
+<div align="center">
+
+<img src="https://skillicons.dev/icons?i=nodejs,javascript" alt="Node.js and JavaScript" />
+
+</div>
+
+## 🔜 What's next
 
 More lessons as I learn — modules and exports are up next.
+
+<div align="center">
+
+![Footer](https://capsule-render.vercel.app/api?type=waving&color=339933&height=120&section=footer)
+
+</div>
